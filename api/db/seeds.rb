@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Facility.create(
+    [
+        {facility_name: "KKK病院"},
+        {facility_name: "KKKクリニック"},
+        {facility_name: "KKK診療所"}
+    ]
+)
