@@ -7,8 +7,29 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Facility.create(
     [
-        {facility_name: "KKK病院"},
-        {facility_name: "KKKクリニック"},
-        {facility_name: "KKK診療所"}
+        {facility_name: "KKK病院",
+        picture: open("#{Rails.root}/db/fixtures/img1.jpg"),
+        content: "脳外科です"},
+        {facility_name: "KKKクリニック",
+        picture: open("#{Rails.root}/db/fixtures/img2.jpg"),
+        content: "耳鼻科です"},
+        {facility_name: "KKK診療所",
+        picture: open("#{Rails.root}/db/fixtures/img3.jpg"),
+        content: "神経内科です"},
+        {facility_name: "KKK診療所",
+        picture: open("#{Rails.root}/db/fixtures/img3.jpg"),
+        content: "神経内科です"},
+        {facility_name: "KKK病院",
+        picture: open("#{Rails.root}/db/fixtures/img1.jpg"),
+        content: "脳外科です"},
+        {facility_name: "KKKクリニック",
+        picture: open("#{Rails.root}/db/fixtures/img2.jpg"),
+        content: "耳鼻科です"},
+        {facility_name: "KKK診療所",
+        picture: open("#{Rails.root}/db/fixtures/img3.jpg"),
+        content: "神経内科です"},
+        {facility_name: "KKK診療所",
+        picture: open("#{Rails.root}/db/fixtures/img3.jpg"),
+        content: "神経内科です"}
     ]
 )

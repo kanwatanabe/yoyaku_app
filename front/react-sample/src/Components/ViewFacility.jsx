@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
+        width: 330,
     },
 });
 
@@ -29,10 +29,11 @@ export default function ViewFacility(props) {
           <CardContent >
             <Typography gutterBottom variant = "h5" component = "h2" >
                {props.data.facility_name}
+               {/* {props.data.picture.url}
+               <img src = "https://www.petio.com/wp-content/uploads/2020/01/cat/02/content06_img.jpg"/> */}
             </Typography> 
             <Typography variant = "body2" color = "textSecondary" component = "p" >
-              Lizards are a widespread group of squamate reptiles, with over 6, 000 species, ranging 
-              across all continents except Antarctica 
+              {props.data.content} 
             </Typography> 
           </CardContent> 
         </CardActionArea> 
