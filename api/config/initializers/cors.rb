@@ -14,3 +14,15 @@
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 #   end
 # end
+
+#追記
+    Rails.application.config.api_only = true
+    Rails.application.config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'http://localhost:8000' , 'http://localhost:3000'
+        resource '*',
+        headers: :any,
+        methods: [:get, :post, :patch, :delete, :options]
+      end
+    end
+    #-----------------------------------------------------------------

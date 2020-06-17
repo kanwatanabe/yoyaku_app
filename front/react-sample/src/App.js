@@ -1,26 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import MainContainer from './Components/MainContainer'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import './App.css'
+
+import { BrowserRouter , Link,Switch, Route } from 'react-router-dom'
+import FacilityCreate from './Components/FacilityCreate'
+
+
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+
+      
+      <Route exact path="/" component={Home} />
+      <Route path="/test" component={Test} />
+      
+      
+      </BrowserRouter>
+    );
+
+    
+  }
 }
+
+const Home = () => (
+
+  <div className="App">
+        <Header />
+          <MainContainer />
+        <Footer />
+      </div>
+
+
+)
+
+const Test = () => (
+       <div>
+       <Header />
+          <FacilityCreate />
+          
+       </div>
+)
 
 export default App;
